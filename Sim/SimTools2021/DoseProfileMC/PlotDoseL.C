@@ -23,10 +23,11 @@
 #include "TLatex.h"
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 void PlotDoseL( const char* finname  = "~/data/G4_BEAMX_ENERGYY.root", 
-		const char* partname = "all" )
+		const char* partname = "all" , double Energy = -100.)
 {
 
   // -----------------------------------------------------------------------------
@@ -237,6 +238,11 @@ void PlotDoseL( const char* finname  = "~/data/G4_BEAMX_ENERGYY.root",
   tex->Draw();
 
   tex = new TLatex( 0.2, 0.8, Form("Tumour-to-normal ratio (TNR) = %f",edep1tot/edep0tot));
+  std::cout << "Energy and TNR\n";
+  std::cout << Energy << " " << edep1tot/edep0tot << std::endl;
+  ofstream outfile("./vals.txt",std::ios_base::app);
+  outfile << Energy << " " << edep1tot/edep0tot << endl;
+
   tex->SetNDC(1);
   tex->SetTextFont(42);
   tex->SetTextColor(2);

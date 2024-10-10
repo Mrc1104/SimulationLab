@@ -27,7 +27,8 @@ PrimaryGeneratorMessenger::PrimaryGeneratorMessenger( PrimaryGeneratorAction* Gu
 
   fSetSeedCmd = new G4UIcmdWithAnInteger("/DoseProfileMC/generator/Seed",this);
   fSetSeedCmd->SetGuidance("Set the random seed for the generator");
-  fSetSeedCmd->SetParameterName("Seed",false);
+  fSetSeedCmd->SetParameterName("Seed",true);
+  //fSetSeedCmd->SetParameterName("Seed",false);
   fSetSeedCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
 
 }

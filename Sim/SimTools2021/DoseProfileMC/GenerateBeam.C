@@ -60,7 +60,7 @@ void GenerateBeam( const char* particle = "BEAMX",
   // Initialise random number generator
   // -----------------------------------------------------------------------------
 
-  TRandom3* fRand = new TRandom3(-1);
+  TRandom3* fRand = new TRandom3(0);
   float spread = 1.0;
   const char* orientation = "top"; 
 
