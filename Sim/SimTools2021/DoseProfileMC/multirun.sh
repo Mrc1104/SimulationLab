@@ -14,7 +14,9 @@ tnrfile=vals.txt
 move_path=${HOME}/share/SimulationLab/Sim/TNR_values
 
 # Photon Energies of Interest
-energies=(1 10 20 30 40 50 60 70 80 88 89 90 91 92 93 100 110 120); btype=gamma
+energies=(1 10 20 30 40 50 60 70 80 87 88 89 90 91 92 93 100 110 120); btype=gamma
+#energies=(100 110 120 130 132 133 134 135 136 137 138 140 150 160); btype=proton
+#energies=(3000 3010 3020 3030 3040 3050 3060 3067 3068 3069 3070 3071 3072 3073 3080 3090 4000); btype=ion
 
 
 # Construct where to move it at the end of the loop
