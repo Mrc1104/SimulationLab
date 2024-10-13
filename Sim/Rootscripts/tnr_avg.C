@@ -35,7 +35,7 @@ void get_stats(string file, ostream& out)
 	}
 	double avg  = mean(y);
 	double err  = dev(y, avg);
-	out << avg << " " << err << endl;
+	out << x.at(0) << " " << avg << " " << err << endl;
 
 }
 
