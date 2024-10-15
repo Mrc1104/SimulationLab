@@ -14,8 +14,8 @@ if [ "$check" != '' ]; then
 	#root -b -q GenerateBeam.C++\(\"$1\",$2,100000,\"~/data/Gen_$1_$2.root\"\)
 	DoseProfileMC macros/batch.mac
 	root -b -q PlotDoseL.C++\(\"~/data/G4_$1_$2.root\",\"all\",$2\)
-	#root -b -q PlotDoseT.C++\(\"~/data/G4_$1_$2.root\",\"all\"\)
-	#root -b -q PlotDoseP.C++\(\"~/data/G4_$1_$2.root\",$2/5\)
+	root -b -q PlotDoseT.C++\(\"~/data/G4_$1_$2.root\",\"all\"\)
+	root -b -q PlotDoseP.C++\(\"~/data/G4_$1_$2.root\",$2/5\)
     
 	rm ~/data/*.root
 
